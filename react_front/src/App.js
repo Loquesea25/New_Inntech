@@ -5,6 +5,8 @@ import './App.css';
 import ComponentShowPersonas from './persona/ShowPersonas';
 import ComponentCreatePersona from './persona/CreatePersona';
 import ComponentEditPersona from './persona/ModifyPersona';
+import Loguin from './persona/Loguin';
+import Register from './persona/Register';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
@@ -20,7 +22,8 @@ function App() {
           <Route path='/' element={<ComponentShowPersonas/>}></Route>
           <Route path='/create' element={<ComponentCreatePersona/>}></Route>
           <Route path='/edit/:id' element={<ComponentEditPersona/>}></Route>
-          
+          <Route path='/loguin' element={<Loguin/>}></Route>
+          <Route path='/register' element={<Register/>}></Route>
 
             
         </Routes>

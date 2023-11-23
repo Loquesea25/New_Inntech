@@ -20,33 +20,34 @@ const ComponentCreatePersona = () =>{
     }
 
     return(
-        <div>
+        <div className="container">
+        <div className="row justify-content-center mt-5">
+          <div className="col-md-6">
             <h3>Crear nuevo registro de persona</h3>
-
-            {/* Cuando realice el submit del formulario, la info se guardará en la constante store */}
+  
             <form onSubmit={store}>
-                <div className="mb-3">
-                    <label className="form-label">Nombre</label>
-                    <input 
-                        value={name}
-                        // Capturo el valor que se ingresará en el input
-                        onChange={ (event) => setName(event.target.value)}
-                        type="text"
-                        className="form-control"
-                    ></input>
-
-                    <label className="form-label">Apelido</label>
-                    <input 
-                        value={last_name}
-                        
-                        onChange={ (event) => setLast_name(event.target.value)}
-                        type="text"
-                        className="form-control"
-                    ></input>
-                </div>
-                <button type="submit" className="btn btn-primary">Guardar</button>
+              <div className="mb-3">
+                <label className="form-label">Nombre</label>
+                <input 
+                  value={name}
+                  onChange={(event) => setName(event.target.value)}
+                  type="text"
+                  className="form-control"
+                />
+  
+                <label className="form-label">Apellido</label>
+                <input 
+                  value={last_name}
+                  onChange={(event) => setLast_name(event.target.value)}
+                  type="text"
+                  className="form-control"
+                />
+              </div>
+              <button type="submit" className="btn btn-primary">Crear</button>
             </form>
+          </div>
         </div>
+      </div>
     )
 }
 

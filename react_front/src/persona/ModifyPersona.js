@@ -35,34 +35,34 @@ const ComponentEditPersona = () =>{
     } 
 
     return(
-        <div>
-             <h3>Modificar persona</h3>
+        <div className="container">
+      <div className="row justify-content-center mt-5">
+        <div className="col-md-6">
+          <h3>Crear nuevo registro de persona</h3>
 
-{/* Cuando realice el submit del formulario, la info se guardará en la constante store */}
-<form onSubmit={update}>
-    <div className="mb-3">
-        <label className="form-label">Nombre</label>
-        <input 
-            value={name}
-            // Capturo el valor que se ingresará en el input
-            onChange={ (event) => setName(event.target.value)}
-            type="text"
-            className="form-control"
-        ></input>
+          <form onSubmit={update}>
+            <div className="mb-3">
+              <label className="form-label">Nombre</label>
+              <input 
+                value={name}
+                onChange={(event) => setName(event.target.value)}
+                type="text"
+                className="form-control"
+              />
+
+              <label className="form-label">Apellido</label>
+              <input 
+                value={last_name}
+                onChange={(event) => setLast_name(event.target.value)}
+                type="text"
+                className="form-control"
+              />
+            </div>
+            <button type="submit" className="btn btn-primary">Guardar</button>
+          </form>
         </div>
-        <div className="mb-3">
-        <label className="form-label">Apelido</label>
-        <input 
-            value={last_name}
-            
-            onChange={ (event) => setLast_name(event.target.value)}
-            type="text"
-            className="form-control"
-        ></input>
+      </div>
     </div>
-    <button type="submit" className="btn btn-primary">Actualizar</button>
-</form>
-        </div>
     )
 }
 
