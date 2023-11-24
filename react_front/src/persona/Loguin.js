@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 
 const Login = () => {
 
+    /*
+    Utilizo useState para manejar los estados en los campos de ingreso de información
+    */ 
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
 
@@ -19,6 +22,7 @@ const Login = () => {
       <h1 className="h3 mb-3 fw-normal">Ingresa tu usuario y contraseña</h1>
 
       <div className="form-floating mb-3">
+        {/* Capturo el evento usando onChange al obtener el valor referenciando con target el cambio  */}
         <input onChange={(event) =>{setUser(event.target.value)}} type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
         <label htmlFor="floatingInput">Nombre de Usuario</label>
       </div>

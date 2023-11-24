@@ -19,6 +19,7 @@ function App() {
       </header>
       <BrowserRouter>
         <Routes>
+          {/* Renderizo los componentes */}
           <Route path='/' element={<ComponentShowPersonas/>}></Route>
           <Route path='/create' element={<ComponentCreatePersona/>}></Route>
           <Route path='/edit/:id' element={<ComponentEditPersona/>}></Route>

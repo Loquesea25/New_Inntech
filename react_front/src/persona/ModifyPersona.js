@@ -7,6 +7,9 @@ const URL = 'http://localhost:8000/personas/'
 const ComponentEditPersona = () =>{
 
     //Componente para modificar persona
+
+    /*Utilizo useNavigate para navegar a traves de la ruta y useParams para acceder a los parametros de la ruta en este caso el id  */
+
     const [name, setName] = useState('')
     const [last_name, setLast_name] = useState('')
     const navigate = useNavigate()

@@ -16,7 +16,7 @@ const ComponentShowPersonas = () =>{
 
     
     //Método que mostrará las personas registradas
-    //axios me permite conectar con la url que definí
+    //axios me permite conectar con la url donde definí los metodos http
     const getAllPersonas = async() =>{
         const response = await axios.get(URL)
         setPersona(response.data)
@@ -28,7 +28,7 @@ const ComponentShowPersonas = () =>{
         getAllPersonas();
     }
 
-    //Aquí devuelvo una vista 
+    //Aquí devuelvo la vista 
     return(
         <div className='container'>
             <div className='row'>
