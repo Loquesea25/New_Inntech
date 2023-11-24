@@ -3,7 +3,7 @@ import React from 'react';
 const Register = () => {
   return (
     <div className="container d-flex justify-content-center align-items-center vh-100">
-    <form className="form-signin w-50">
+    <form className="form-signin w-50" action='/register' method='POST'>
       <h1 className="h3 mb-3 fw-normal">Crea tu usuario y contraseña</h1>
 
       <div className="form-floating mb-3">
@@ -11,7 +11,7 @@ const Register = () => {
         <label htmlFor="floatingInput">Nombre de Usuario</label>
       </div>
       <div className="form-floating mb-3">
-        <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
+        <input type="text" className="form-control" id="floatingInput" placeholder="name@example.com" />
         <label htmlFor="floatingInput">Nombre </label>
       </div>
       <div className="form-floating mb-3">
